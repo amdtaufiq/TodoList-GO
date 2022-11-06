@@ -1,0 +1,851 @@
+{
+	"info": {
+		"_postman_id": "1631dc77-6801-4a05-a62d-69b118695983",
+		"name": "Todolist",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10694773"
+	},
+	"item": [
+		{
+			"name": "List todo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/todo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"todo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List todo",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/todo",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"todo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Nov 2022 12:48:32 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "350"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": 200,\n    \"success\": true,\n    \"message\": \"List of todos\",\n    \"data\": [\n        {\n            \"ID\": 1,\n            \"Title\": \"Ini title\",\n            \"Description\": \"ini description\",\n            \"File\": \"uploads/1667738875.pdf\",\n            \"CreatedAt\": \"2022-11-06T19:48:02.475049+07:00\"\n        },\n        {\n            \"ID\": 2,\n            \"Title\": \"Ini title\",\n            \"Description\": \"ini description\",\n            \"File\": \"uploads/1667738910.pdf\",\n            \"CreatedAt\": \"2022-11-06T19:48:30.162427+07:00\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "List todo detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/todo/detail",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"todo",
+						"detail"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List todo detail",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/todo/detail",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"todo",
+								"detail"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Nov 2022 14:01:42 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "667"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": 200,\n    \"success\": true,\n    \"message\": \"List of todos\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"title\": \"Title Update\",\n            \"description\": \"Description update\",\n            \"file_path\": \"uploads/1667740590.pdf\",\n            \"created_at\": \"2022-11-06T19:48:30.162427+07:00\",\n            \"sub_todos\": [\n                {\n                    \"id\": 4,\n                    \"title\": \"Ini title\",\n                    \"description\": \"ini description\",\n                    \"file_path\": \"\",\n                    \"created_at\": \"2022-11-06T20:43:23.562083+07:00\"\n                },\n                {\n                    \"id\": 5,\n                    \"title\": \"Ini title\",\n                    \"description\": \"ini description\",\n                    \"file_path\": \"uploads/1667742243.pdf\",\n                    \"created_at\": \"2022-11-06T20:44:03.477478+07:00\"\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Ini title\",\n            \"description\": \"ini description\",\n            \"file_path\": \"uploads/1667743296.pdf\",\n            \"created_at\": \"2022-11-06T21:01:36.244964+07:00\",\n            \"sub_todos\": []\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Todo by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/todo/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"todo",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Todo by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/todo/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"todo",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Nov 2022 13:56:56 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "500"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": 200,\n    \"success\": true,\n    \"message\": \"Todo data\",\n    \"data\": {\n        \"id\": 2,\n        \"title\": \"Title Update\",\n        \"description\": \"Description update\",\n        \"file_path\": \"uploads/1667740590.pdf\",\n        \"created_at\": \"2022-11-06T19:48:30.162427+07:00\",\n        \"sub_todos\": [\n            {\n                \"id\": 4,\n                \"title\": \"Ini title\",\n                \"description\": \"ini description\",\n                \"file_path\": \"\",\n                \"created_at\": \"2022-11-06T20:43:23.562083+07:00\"\n            },\n            {\n                \"id\": 5,\n                \"title\": \"Ini title\",\n                \"description\": \"ini description\",\n                \"file_path\": \"uploads/1667742243.pdf\",\n                \"created_at\": \"2022-11-06T20:44:03.477478+07:00\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create todo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Ini title",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "ini description",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/v1/todo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"todo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create todo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Ini title",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "ini description",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/TAUFIQ/Downloads/MoU Role Junior Expert Freelance - Ahmad Taufiq Hidayat.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/v1/todo",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"todo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Nov 2022 12:48:30 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": 200,\n    \"success\": true,\n    \"message\": \"Success to create todo\",\n    \"data\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete todo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/todo/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"todo",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete todo",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/todo/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"todo",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Nov 2022 13:07:59 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "72"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": 200,\n    \"success\": true,\n    \"message\": \"Todo deleted\",\n    \"data\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Update todo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "Title Update",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Description update",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/TAUFIQ/Downloads/MoU Role Junior Expert Freelance - Ahmad Taufiq Hidayat.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/v1/todo/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"todo",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update todo",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Title Update",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Description update",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/TAUFIQ/Downloads/MoU Role Junior Expert Freelance - Ahmad Taufiq Hidayat.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/v1/todo/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"todo",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Nov 2022 13:16:30 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": 200,\n    \"success\": true,\n    \"message\": \"Success to update todo\",\n    \"data\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Create sub todo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Ini title",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "ini description",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/TAUFIQ/Downloads/CV Ahmad Taufiq Hidayat (1).pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/v1/todo/2/sub_todo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"todo",
+						"2",
+						"sub_todo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create sub todo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Ini title",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "ini description",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/TAUFIQ/Downloads/MoU Role Junior Expert Freelance - Ahmad Taufiq Hidayat.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/v1/todo/2/sub_todo",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"todo",
+								"2",
+								"sub_todo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Nov 2022 13:41:03 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "85"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": 200,\n    \"success\": true,\n    \"message\": \"Success to create subTodo\",\n    \"data\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "List sub todo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/todo/2/sub_todo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"todo",
+						"2",
+						"sub_todo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List sub todo",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/todo/2/sub_todo",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"todo",
+								"2",
+								"sub_todo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Nov 2022 13:44:38 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "449"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": 200,\n    \"success\": true,\n    \"message\": \"List of subTodos\",\n    \"data\": [\n        {\n            \"ID\": 3,\n            \"Title\": \"Ini title\",\n            \"Description\": \"ini description\",\n            \"File\": \"\",\n            \"CreatedAt\": \"2022-11-06T20:42:54.613008+07:00\"\n        },\n        {\n            \"ID\": 4,\n            \"Title\": \"Ini title\",\n            \"Description\": \"ini description\",\n            \"File\": \"\",\n            \"CreatedAt\": \"2022-11-06T20:43:23.562083+07:00\"\n        },\n        {\n            \"ID\": 5,\n            \"Title\": \"Ini title\",\n            \"Description\": \"ini description\",\n            \"File\": \"uploads/1667742243.pdf\",\n            \"CreatedAt\": \"2022-11-06T20:44:03.477478+07:00\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Sub Todo by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/todo/2/sub_todo/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"todo",
+						"2",
+						"sub_todo",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Sub Todo by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/todo/2/sub_todo/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"todo",
+								"2",
+								"sub_todo",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Nov 2022 13:48:48 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "214"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": 200,\n    \"success\": true,\n    \"message\": \"Sub Todo Data\",\n    \"data\": {\n        \"ID\": 3,\n        \"Title\": \"Title Update\",\n        \"Description\": \"Description update\",\n        \"File\": \"uploads/1667742441.pdf\",\n        \"CreatedAt\": \"2022-11-06T20:42:54.613008+07:00\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update sub todo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "Title Update",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Description update",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/TAUFIQ/Downloads/CV Ahmad Taufiq Hidayat (1).pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/v1/todo/2/sub_todo/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"todo",
+						"2",
+						"sub_todo",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update sub todo",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Title Update",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Description update",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/TAUFIQ/Downloads/CV Ahmad Taufiq Hidayat (1).pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/v1/todo/2/sub_todo/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"todo",
+								"2",
+								"sub_todo",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Nov 2022 13:47:21 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "85"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": 200,\n    \"success\": true,\n    \"message\": \"Success to update subTodo\",\n    \"data\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Sub Todo by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/todo/2/sub_todo/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"todo",
+						"2",
+						"sub_todo",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Sub Todo by ID",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/todo/2/sub_todo/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"todo",
+								"2",
+								"sub_todo",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Nov 2022 13:49:38 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "72"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": 200,\n    \"success\": true,\n    \"message\": \"Todo deleted\",\n    \"data\": true\n}"
+				}
+			]
+		}
+	]
+}
